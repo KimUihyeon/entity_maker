@@ -2,8 +2,7 @@ package com.study.entity.maker.enums;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 
 /**
@@ -25,4 +24,9 @@ public class ClassAnnotationsEnums {
 
     public static String NoArgsConstructor = "@NoArgsConstructor";
     public static String AllArgsConstructor = "@AllArgsConstructor";
+
+
+    public static String Id = "@Id";
+    public static String GeneratedValue = "@GeneratedValue(strategy = GenerationType.IDENTITY)";
+
 }

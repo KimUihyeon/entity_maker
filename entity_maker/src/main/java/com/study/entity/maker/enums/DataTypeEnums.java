@@ -11,17 +11,28 @@ import lombok.Getter;
  * @since 2020.11.16
  */
 
-@Getter
-public class DataTypeEnums {
+public enum DataTypeEnums {
 
-    private String STRING =  "String";
-    private String INT =  "int";
-    private String LONG_OBJECT =  "Long";
-    private String LONG =  "long";
-    private String TimeStamp =  "Timestamp";
+    STRING("String"),
 
-    public String setClassType(String dataType){
-        return dataType;
+    INT("String"),
+
+    LONG("long"),
+
+    LONG_OBJECT("Long");
+
+
+
+    private String value;
+
+
+
+    DataTypeEnums(String string) {
+        this.value = string;
     }
 
+    @Override
+    public String toString() {
+        return this.value;
+    }
 }

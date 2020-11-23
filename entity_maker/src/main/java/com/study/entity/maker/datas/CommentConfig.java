@@ -8,14 +8,19 @@ package com.study.entity.maker.datas;
  */
 public class CommentConfig {
 
-    public String getClassComment(String className, String author, String since){
-        StringBuilder sb = new StringBuilder();
-        sb.append("/**");
-        sb.append("/* " + className);
-        sb.append("/* @author " );
-        sb.append("/**");
-        sb.append("/**");
+    public static String getClassComment(String className){
 
-        return "";
+        String since = StringConfig.nowDate();
+        String author = StringConfig.author;
+
+        StringBuilder sb = new StringBuilder();
+        sb.append("/**\n");
+        sb.append(" * " + className + "\n");
+        sb.append(" * \n");
+        sb.append(" * @author " +author+ "\n");
+        sb.append(" * @since " +since + "\n" );
+        sb.append(" */");
+
+        return sb.toString();
     }
 }

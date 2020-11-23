@@ -1,5 +1,8 @@
 package com.study.entity.maker.datas;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 /**
  * StringConfig
  *
@@ -8,10 +11,13 @@ package com.study.entity.maker.datas;
  */
 public class StringConfig {
 
-    private static String author = "kuh";
+    public static String author = "kuh";
 
-    private static String cYear = "2020";
-    private static String cMount = "11";
-    private static String cDay = "16";
+
+    public static String nowDate(){
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+        Date date = new Date();
+        return df.format(date).toString();
+    }
 
 }
